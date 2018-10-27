@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+@extends('layouts.master')
     
-    <title>Cars</title>
-  
-</head>
-<body>
-    <h1>About us</h1>
-</body>
-</html>
+@section('title')
+    Cars
+@endsection
+    
+@section('content')
+
+    <div class="blog">
+        About us
+    </div>
+    
+@endsection
+    

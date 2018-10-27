@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+@extends('layouts.master')
     
-    <title>Cars</title>
-   
-</head>
-<body>
-            {{-- <h1>{{$car->id}}</h1> --}}
-    <ul>
+@section('title')
+    Cars
+@endsection   
+
+@section('content')
+<ul>
                 
-            <li>{{ $car->title }}</li>
-            <li>{{ $car->producer }}</li>
-            <li>{{ $car->number_of_doors }}</li>
-        
-    </ul>
-</body>
-</html>
+    <li>{{ $car->title }}</li>
+    <li>{{ $car->producer }}</li>
+    <li>{{ $car->number_of_doors }}</li>
+
+</ul>
+@endsection
+
+            {{-- <h1>{{$car->id}}</h1> --}}
+    

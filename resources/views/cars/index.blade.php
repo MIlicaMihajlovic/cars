@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+@extends('layouts.master')
+
+
+@section('title')
+    Cars
+@endsection
+
+@section('content')
+<ul>
+    @foreach($cars as $car)
+    <a href="/cars/{{$car->id}}">  
+        <li>{{ $car->title }}</li>
+    </a>        
+    @endforeach
+</ul>
+@endsection
     
-    <title>Cars</title>
-   
-</head>
-<body>
-    <ul>
-        @foreach($cars as $car)
-        <a href="/cars/{{$car->id}}">  
-            <li>{{ $car->title }}</li>
-        </a>        
-        @endforeach
-    </ul>
-</body>
-</html>
