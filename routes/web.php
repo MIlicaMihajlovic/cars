@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome', ['name' => 'Milica'], ['age' => '28']);
+    return view('welcome', compact(['name' => 'Milica']), ['age' => '28']);
 });
 
 Route::get('/about', function () {
@@ -21,4 +21,4 @@ Route::get('/about', function () {
 
 Route::get('/cars', 'CarsController@index');
 
-Route::get('/cars/{id}', 'CarsController@get');
+Route::get('/cars/{id}', 'CarsController@show');

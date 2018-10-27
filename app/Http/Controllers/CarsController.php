@@ -11,13 +11,15 @@ class CarsController extends Controller
 
         $cars = Car::all();
         
-        return view('cars', ['cars' => $cars]);
+        return view('cars.index', ['cars' => $cars]);
         
     }
 
-    public function get($id)
+    public function show($id)
     {
         $car = Car::findOrFail($id);
+
+        return view('cars.show', ['car' => $car]);
 
     } 
 }
